@@ -126,8 +126,7 @@ def revenue():
     return flask.render_template('revenue.html',table=Month_lst[1:])
 
 
-if __name__ == '__main__': 
-    app.run(port = 4569, debug = True) 
-    
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True, use_reloader=True)
+
 
