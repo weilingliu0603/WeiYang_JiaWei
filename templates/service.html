@@ -1,0 +1,79 @@
+<html>
+    <style>
+        h1{
+            font-size:500%;
+            color:black;
+            background-color:#087f23;
+            line-height: 100px;
+            text-align: center;
+            height: 100px;
+        }
+        td{
+            font-size: xx-large;
+            text-align: center;
+            width: 20%;
+            height: 50px; ;
+        }
+    </style>
+
+    <h1>Services</h1>
+
+    <body style="background-color: #4caf50;table-layout: fixed;">
+
+    
+    <form action="{{ url_for('invoice') }}" method="POST">
+
+        <label style="font-size: 25px;">Name:</label>
+        <input type="text" name='Name'>
+        <br>
+        
+
+        <label style="font-size: 25px;">Member ID:</label>
+        <input type="text" name='Member' value="NULL" >
+        <br>
+
+        <table align="center" border =1 style="background-color: #80e27e;">
+
+        <tr>
+            <td>Hair Cut (short)</td>
+            <td>Hair Cut (medium)</td>
+            <td>Hair Cut (long)</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="service" value ='Cut (short length)'></td>
+            <td><input type="checkbox" name="service" value ='Cut (medium length)'></td>
+            <td><input type="checkbox" name="service" value ='Cut (long length)'></td>
+            
+        </tr>
+        <tr>
+            <td>Colour</td>
+            <td>Highligh (half)</td>
+            <td>Highlight (full)</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="service" value ='Colour'></td>
+            <td><input type="checkbox" name="service" value ='Highlight (half head)'></td>
+            <td><input type="checkbox" name="service" value ='Highlight (full head)'></td>
+        </tr>
+        <tr>
+            <td>Perm</td>
+            <td>Rebonding</td>
+            <td>Treatment</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="service" value ='Perm'></td>
+            <td><input type="checkbox" name="service" value ='Rebonding'></td>
+            <td><input type="checkbox" name="service" value ='Treatment'></td>
+        </tr>
+        <tr>
+            <td></td>
+
+            <td><input type="submit" ></td>
+            <td></td>
+        </tr>
+
+
+    </form>
+    </table>
+    </body> 
+</html>

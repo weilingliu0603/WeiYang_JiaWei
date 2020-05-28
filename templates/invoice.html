@@ -1,0 +1,54 @@
+<html>
+    <style>
+    h1{
+        font-size:500%;
+        color:black;
+        background-color:#9e9e9e;
+        line-height: 100px;
+        text-align: center;
+        height: 100px;
+    }
+    th,td{
+        font-size: x-large;
+
+    }
+</style>
+<h1> Invoice </h1>
+<body style="background-color: #cfcfcf;">
+    <div style="font-size: x-large;">Customer Name: {{name}}</div>
+    <div style="font-size: x-large;">Member ID: {{member}}</div>
+    <div style="font-size: x-large;" align ='right' >Date: {{date}} </div>
+    <div style="font-size: x-large;" align ='right' >Invoice ID: {{id}} </div>
+
+    <table align = 'center' border = 3 >
+        <tr>
+            <th>Service</th>
+            <th>Price</th>
+        </tr>
+        {% for row in invoice %}
+ 
+        <tr>
+          <td>{{ row[0] }}</td>
+          <td align="right"> {{ row[1] }}</td>
+
+        </tr>
+        {% endfor %}
+        <tr>
+            <tr>
+                <td>Discount</td>
+                <td>{{discount}}</td>
+            </tr>
+            <tr>
+                <td>Total Price</td>
+                <td>{{total_price}}</td>
+            </tr>
+            <td colspan="2" align = 'center'>
+                <a href="{{url_for('confirm_invoice')}}">Confirm</a>
+            </td>
+        </tr>
+    </table>
+
+
+
+</body>
+</html>

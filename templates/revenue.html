@@ -1,0 +1,35 @@
+<html>
+    <style>
+        h1{
+            font-size:500%;
+            color:white;
+            background-color:#ca9b52;
+            line-height: 100px;
+            text-align: center;
+            height: 100px;
+        }
+        th,td{
+            font-size: x-large;
+    
+        }
+    </style>
+    <h1> Revenue </h1>
+    <a style="font-size: x-large;" href="{{url_for('home')}}">Back</a>
+    <body style="background-color: #ffcc80;table-layout: fixed;">
+        <table style="background-color: #ffffb0;border-style: solid;border-color: black;" border = '5' align="center">
+            <tr>
+                <th>Month</th>
+                <th>Revenue</th>
+            </tr>
+            {% for row in table %}
+            <tr>
+              <td>{{ row[0] }}</td>
+              <td align="right"> {{ row[1] }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </body>
+
+
+</html>    

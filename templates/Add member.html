@@ -1,0 +1,76 @@
+<html>
+    <style>
+         h1{
+            font-size:500%;
+            color:white;
+            background-color:#65499c;
+            line-height: 100px;
+            text-align: center;
+            height: 100px;
+        }
+        .label{
+            font-size: 20px;
+
+        }
+        .input{
+            background-color: #ede7f6;
+        }
+        td{
+            height: 50px;
+        }
+    </style>
+<h1>Add Member</h1>
+<body style="background-color:#9575cd;">
+    <form action="{{ url_for('member_added') }}" method="POST">
+        <table align="center" style="border-style: solid;background-color: #c7a4ff;border-radius: 10px;border-color: black;width: 25%;" border="5"   >
+            <tr>
+                <th style="font-size:30px;">
+                    Sign Up 
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <lable class='label'>Full Name:</label>
+                    <input type="text" name = 'SU_Name' class ='input'>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <lable class='label'>E-mail:</label>
+                    <input type="text" name = 'Email' class ='input'>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <lable class='label'>Contact:</label>
+                    <input type="text" name = 'Contact' class ='input'>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> 
+                <label style="font-size: 20px;">Male</label>
+                <input type="radio" name='Gender' value='M'> 
+                <label style="font-size: 20px;">Female</label>
+                <input type="radio" name='Gender' value='F' >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <lable class='label'>Address:</label>
+                <input type="text" name = 'Address' class ='input'>
+                </td>
+                
+            </tr>
+            <tr>
+                <td align="center">
+                    <input type="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+
+
+
+</html>

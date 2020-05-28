@@ -1,0 +1,46 @@
+<html>
+    <style>
+        h1{
+            font-size:500%;
+            color:white;
+            background-color:#8e0000;
+            line-height: 100px;
+            text-align: center;
+            height: 100px;
+        }
+        th,td{
+            font-size: x-large;
+    
+        }
+    </style>
+    <h1> History </h1>
+    <body style="background-color: #c62828;table-layout: fixed;">
+       <form action="{{ url_for('history') }}" method="GET">
+            <select id = 'choice'name = 'choice'>
+                <option value="Day" >Today</option>
+                <option value="Week">Last 7 days</option>
+                <option value="Month">Last 30 days</option>
+                </select>
+                <input type="submit">
+        </form>
+        <table style="background-color: #ff5f52;border-style: solid;border-color: black;" border = '5' align="center">
+            <tr>
+                <th>Invoice ID</th>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Member ID</th>
+            </tr>
+            {% for row in history %}
+            <tr>
+              <td>{{ row[0] }}</td>
+              <td align="right"> {{ row[1] }}</td>
+              <td> {{row[2]}}</td>
+              <td>{{row[3]}}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </body>
+
+
+</html>
